@@ -1,9 +1,0 @@
-﻿  HookBridge.cpp
-     Creating library C:\Users\Administrator\documents\visual studio 2015\Projects\OSHook\Release\OSHook.lib and object C:\Users\Administrator\documents\visual studio 2015\Projects\OSHook\Release\OSHook.exp
-  Generating code
-  3 of 3 functions (100.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  OSHook.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\OSHook\Release\OSHook.dll
-  OSHook.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\OSHook\Release\OSHook.pdb (Full PDB)
