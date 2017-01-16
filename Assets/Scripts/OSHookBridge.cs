@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Text;
 using System.Runtime.InteropServices;
 
-public class OSHookBridge 
+public class OSHookBridge
 {
 #if UNITY_STANDALONE_OSX
 
@@ -32,6 +33,7 @@ public class OSHookBridge
 
     [DllImport("OSHook")]
     public static extern IntPtr ReturnString();
+    //public static extern void ReturnString([MarshalAs(UnmanagedType.LPStr)]StringBuilder str);
 
     [DllImport("OSHook")]
     public static extern int ReturnInt();
