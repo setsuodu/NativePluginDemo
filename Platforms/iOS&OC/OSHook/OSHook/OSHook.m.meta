@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9cac0650d378742808db2f153d2a5b14
-timeCreated: 1484649192
+guid: ca155bf603c814b6d8f371fd33cc2a8b
+timeCreated: 1484537663
 licenseType: Pro
 PluginImporter:
   serializedVersion: 1
@@ -17,6 +17,9 @@ PluginImporter:
       settings:
         DefaultValueInitialized: true
     iOS:
+      enabled: 1
+      settings: {}
+    tvOS:
       enabled: 1
       settings: {}
   userData: 

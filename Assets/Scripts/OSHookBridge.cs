@@ -26,6 +26,12 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int ReturnInt();
 
+	[DllImport("__Internal")]
+	public static extern IntPtr CreateInstance();
+
+	[DllImport("__Internal")]
+	public static extern int GetInstanceInt(IntPtr instanceKey);
+
 #elif UNITY_ANDROID
 
     [DllImport("OSHook", CallingConvention=CallingConvention.Cdecl)]

@@ -1,0 +1,25 @@
+//
+//  OSHook.h
+//  OSHook
+//
+//  Created by 薛宇涛 on 2017/1/15.
+//  Copyright © 2017年 薛宇涛. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface OSHook : NSObject
+
++ (int) returnInt;
+
++ (NSString*) returnString;
+
+- (int) returnInstanceInt;
+
+- (NSString*) returnInstanceString;
+
++ (NSString*) createInstance;
+
++ (OSHook*) getInstanceForKey:(NSString*) key;
+
+@end
