@@ -12,9 +12,12 @@ public class PluginController : MonoBehaviour
         Debug.Log ("Return Int = " + OSHookBridge.ReturnInt());
         //Debug.Log ("Return String = " + Marshal.PtrToStringAuto(OSHookBridge.ReturnString()));
         Debug.Log("Return String = " + Marshal.PtrToStringAnsi(OSHookBridge.ReturnString()));
-
-		IntPtr handle = OSHookBridge.CreateInstance ();
-		Debug.Log ("Returned Instance Int = " + OSHookBridge.GetInstanceInt(handle));
-
+#if UNITY_IOS
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            IntPtr handle = OSHookBridge.CreateInstance();
+            Debug.Log("Returned Instance Int = " + OSHookBridge.GetInstanceInt(handle));
+        }
+#endif
     }
 }
