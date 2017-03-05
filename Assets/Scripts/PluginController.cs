@@ -9,15 +9,17 @@ public class PluginController : MonoBehaviour
 {
 	void Start () 
 	{
-        Debug.Log ("Return Int = " + OSHookBridge.ReturnInt());
+        //Debug.Log ("Return Int = " + OSHookBridge.ReturnInt());
         //Debug.Log ("Return String = " + Marshal.PtrToStringAuto(OSHookBridge.ReturnString()));
         Debug.Log("Return String = " + Marshal.PtrToStringAnsi(OSHookBridge.ReturnString()));
-#if UNITY_IOS
-        if (Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            IntPtr handle = OSHookBridge.CreateInstance();
-            Debug.Log("Returned Instance Int = " + OSHookBridge.GetInstanceInt(handle));
-        }
-#endif
+
+		float[] matrix = new float[16];
+		OSHookBridge.getGLProjectionMatrix(matrix);
+		for (int i = 0; i < matrix.Length; i++) 
+		{
+			Debug.Log ("No." + i + " : " + matrix[i]);
+		}
+
+		//Debug.Log ("myTest Int = " + OSHookBridge.myTest());
     }
 }

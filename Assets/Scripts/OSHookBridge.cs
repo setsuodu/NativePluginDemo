@@ -15,6 +15,12 @@ public class OSHookBridge
 	[DllImport("OSHook")]
 	public static extern int ReturnInt();
 
+	[DllImport("OSHook")]
+	public static extern int myTest ();
+
+	[DllImport("OSHook")]
+	public static extern bool getGLProjectionMatrix (float[] matrix);
+
 #elif UNITY_IOS
 
 	[DllImport("__Internal")]
@@ -26,11 +32,17 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int ReturnInt();
 
-	[DllImport("__Internal")]
-	public static extern IntPtr CreateInstance();
+	//[DllImport("__Internal")]
+	//public static extern IntPtr CreateInstance();
+
+	//[DllImport("__Internal")]
+	//public static extern int GetInstanceInt(IntPtr instanceKey);
+
+	//[DllImport("__Internal")]
+	//public static extern int myTest ();
 
 	[DllImport("__Internal")]
-	public static extern int GetInstanceInt(IntPtr instanceKey);
+	public static extern bool getGLProjectionMatrix (float[] matrix);
 
 #elif UNITY_ANDROID
 
@@ -55,6 +67,15 @@ public class OSHookBridge
 
     [DllImport("OSHook")]
     public static extern int ReturnInt();
+
+	[DllImport("PassFloat")]
+	public static extern int Addition(int x, int y);
+
+	[DllImport("PassFloat")]
+	public static extern float PassFloat();
+
+	[DllImport("PassFloat")]
+	public static extern bool getGLProjectionMatrix(float[] f);
 
 #endif
 }
