@@ -14,4 +14,5 @@ extern "C"{
     
     int ReturnInt();
     
+    bool getGLProjectionMatrix(float *a);
 }

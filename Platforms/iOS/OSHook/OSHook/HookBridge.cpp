@@ -22,3 +22,12 @@ const char* ReturnString(){
 int ReturnInt(){
     return 5;
 }
+    
+bool getGLProjectionMatrix(float *a){
+    float matrix[16] = {1.6,1,0,0, 1.2,1,0,0, 1.1,1,0,0, 1.3,1,0,0};
+    for(int i = 0; i<sizeof(matrix); i++){
+        a[i] = matrix[i];
+    }
+    return true;
+}
+    
