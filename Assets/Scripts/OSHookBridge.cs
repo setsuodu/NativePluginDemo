@@ -75,7 +75,10 @@ public class OSHookBridge
 	public static extern float PassFloat();
 
 	[DllImport("PassFloat")]
-	public static extern bool getGLProjectionMatrix(float[] f);
+	public static extern bool getGLProjectionMatrix(float[] matrix);
+
+    [DllImport("OSHook")]
+    public static extern void getTrackResultId(ref byte uid);
 
 #endif
 }
