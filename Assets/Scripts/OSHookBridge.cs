@@ -21,6 +21,9 @@ public class OSHookBridge
 	[DllImport("OSHook")]
 	public static extern bool getGLProjectionMatrix (float[] matrix);
 
+	[DllImport("OSHook")]
+	public static extern void getTrackResultId(ref byte uid);
+
 #elif UNITY_IOS
 
 	[DllImport("__Internal")]
