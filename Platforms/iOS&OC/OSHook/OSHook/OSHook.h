@@ -6,10 +6,13 @@
 //  Copyright © 2017年 薛宇涛. All rights reserved.
 //
 
+//列出OSHook.m中的方法
+
 #import <Foundation/Foundation.h>
 
 @interface OSHook : NSObject
 
+//C++
 + (int) returnInt;
 
 + (NSString*) returnString;
@@ -18,6 +21,10 @@
 
 - (NSString*) returnInstanceString;
 
+- (int) CallOC;
+
+
+//OC
 + (NSString*) createInstance;
 
 + (OSHook*) getInstanceForKey:(NSString*) key;

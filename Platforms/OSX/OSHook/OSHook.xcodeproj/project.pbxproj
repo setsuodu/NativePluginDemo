@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E3E66AC207DAA6300C826A2 /* interface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E66AB207DAA6300C826A2 /* interface.mm */; };
 		9EA35E611E2C5E0E0077EBE9 /* HookBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EA35E5D1E2C5E0E0077EBE9 /* HookBridge.cpp */; };
 		9EA35E621E2C5E0E0077EBE9 /* OSHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA35E601E2C5E0E0077EBE9 /* OSHook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E3E66AB207DAA6300C826A2 /* interface.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = interface.mm; sourceTree = "<group>"; };
 		9EA35E541E2C5BF60077EBE9 /* OSHook.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSHook.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA35E571E2C5BF60077EBE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EA35E5D1E2C5E0E0077EBE9 /* HookBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HookBridge.cpp; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 				9EA35E5F1E2C5E0E0077EBE9 /* OSHook.h */,
 				9EA35E601E2C5E0E0077EBE9 /* OSHook.m */,
 				9EA35E571E2C5BF60077EBE9 /* Info.plist */,
-				9E3E66AB207DAA6300C826A2 /* interface.mm */,
 			);
 			path = OSHook;
 			sourceTree = "<group>";
@@ -131,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA35E621E2C5E0E0077EBE9 /* OSHook.m in Sources */,
-				9E3E66AC207DAA6300C826A2 /* interface.mm in Sources */,
 				9EA35E611E2C5E0E0077EBE9 /* HookBridge.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

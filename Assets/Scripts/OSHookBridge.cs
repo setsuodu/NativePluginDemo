@@ -32,8 +32,8 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int ReturnInt();
 
-	[DllImport("__Internal")]
-	public static extern bool getGLProjectionMatrix (float[] matrix);
+	//[DllImport("__Internal")]
+	//public static extern bool getGLProjectionMatrix (float[] matrix);
 
 	[DllImport("__Internal")]
 	public static extern void CallOC(); //该方法为oc 中mm文件方法名称
@@ -42,11 +42,11 @@ public class OSHookBridge
 	//[DllImport("__Internal")]
 	//public static extern int OpenWebView (string url);
 
-	//[DllImport("__Internal")]
-	//public static extern IntPtr CreateInstance();
+	[DllImport("__Internal")]
+	public static extern IntPtr CreateInstance();
 
-	//[DllImport("__Internal")]
-	//public static extern int GetInstanceInt(IntPtr instanceKey);
+	[DllImport("__Internal")]
+	public static extern int GetInstanceInt(IntPtr instanceKey);
 
 #elif UNITY_ANDROID
 

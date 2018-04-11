@@ -42,13 +42,16 @@ NSMutableDictionary *_instanceHolder;
     
     [[OSHook instanceHolder] setObject:_osHook forKey:[myUUID UUIDString]];
     
-    
-    
     return [myUUID UUIDString];
 }
 
 + (OSHook*) getInstanceForKey:(NSString*) key{
     return [[OSHook instanceHolder] valueForKey:key];
+}
+
+- (int) CallOC{
+    NSLog(@"调用到了OC");
+    return 0;
 }
 
 @end
