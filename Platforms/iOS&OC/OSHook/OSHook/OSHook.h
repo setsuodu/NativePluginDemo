@@ -21,7 +21,7 @@
 
 - (NSString*) returnInstanceString;
 
-- (int) CallOC;
+- (int) CallOB;
 
 
 //OC

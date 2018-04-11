@@ -32,8 +32,22 @@ const int GetInstanceInt(const char* instanceKey){
     return [hook returnInstanceInt];
 }
 
-const int  GetInstanceCallOC(const char* instanceKey){
+const int GetInstanceCallOB(const char* instanceKey){
     NSString *key = [NSString stringWithCString:instanceKey encoding:NSUTF8StringEncoding];
     OSHook *hook = [OSHook getInstanceForKey:key];
-    return [hook CallOC];
+    return [hook CallOB];
 }
+
+extern "C" void CallOC()
+{
+    NSLog(@"调用到了OC");
+}
+
+/*
+extern "C" void Unity_To_iOS(char *str, char *stt)
+{
+    [GetAppController() unityPause:YES];
+    GetAppController().unityView.hidden=YES;
+}
+*/
+

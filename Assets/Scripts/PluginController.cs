@@ -9,11 +9,12 @@ public class PluginController : MonoBehaviour
 {
 	void Start()
 	{
-		OSHookBridge.CallOC ();
+		//Debug.Log ("Return Int: " + OSHookBridge.ReturnInt());
 
 		//OC是对象，要用创建实例的方法调用
 		IntPtr handle = OSHookBridge.CreateInstance ();
 		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceInt(handle));
+		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceCallOB(handle));
 	}
 
 	public void OpenWebView()

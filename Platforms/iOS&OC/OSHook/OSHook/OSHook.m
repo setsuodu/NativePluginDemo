@@ -49,8 +49,8 @@ NSMutableDictionary *_instanceHolder;
     return [[OSHook instanceHolder] valueForKey:key];
 }
 
-- (int) CallOC{
-    NSLog(@"调用到了OC");
+- (int) CallOB{
+    NSLog(@"调用到了OB");
     return 0;
 }
 

@@ -24,6 +24,6 @@ extern "C"{
     
     const int GetInstanceInt(const char* instanceKey);
     
-    const int GetInstanceCallOC(const char* instanceKey);
+    const int GetInstanceCallOB(const char* instanceKey);
     
 }
