@@ -12,9 +12,8 @@ extern "C"{
     
     const char* ReturnString();
     
-    //int ReturnInt();
+    int ReturnInt();
     
     bool getGLProjectionMatrix(float* a);
     
-    int myTest();
 }

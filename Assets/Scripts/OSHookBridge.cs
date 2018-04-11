@@ -16,13 +16,10 @@ public class OSHookBridge
 	public static extern int ReturnInt();
 
 	[DllImport("OSHook")]
-	public static extern int myTest ();
-
-	[DllImport("OSHook")]
 	public static extern bool getGLProjectionMatrix (float[] matrix);
 
-	[DllImport("OSHook")]
-	public static extern void getTrackResultId(ref byte uid);
+	//[DllImport("OSHook")]
+	//public static extern void getTrackResultId(ref byte uid);
 
 #elif UNITY_IOS
 
@@ -35,17 +32,21 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int ReturnInt();
 
+	[DllImport("__Internal")]
+	public static extern bool getGLProjectionMatrix (float[] matrix);
+
+	[DllImport("__Internal")]
+	public static extern void CallOC(); //该方法为oc 中mm文件方法名称
+
+	//打开网页
+	//[DllImport("__Internal")]
+	//public static extern int OpenWebView (string url);
+
 	//[DllImport("__Internal")]
 	//public static extern IntPtr CreateInstance();
 
 	//[DllImport("__Internal")]
 	//public static extern int GetInstanceInt(IntPtr instanceKey);
-
-	//[DllImport("__Internal")]
-	//public static extern int myTest ();
-
-	[DllImport("__Internal")]
-	public static extern bool getGLProjectionMatrix (float[] matrix);
 
 #elif UNITY_ANDROID
 
