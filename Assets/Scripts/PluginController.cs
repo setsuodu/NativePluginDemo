@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PluginController : MonoBehaviour
 {
@@ -12,14 +13,15 @@ public class PluginController : MonoBehaviour
 		//Debug.Log ("Return Int: " + OSHookBridge.ReturnInt());
 
 		//OC是对象，要用创建实例的方法调用
-		IntPtr handle = OSHookBridge.CreateInstance ();
-		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceInt(handle));
-		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceCallOB(handle));
+		IntPtr handle = OSHookBridge.CreateInstance (); //获取实例
+		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceInt(handle)); //94632165
+		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceCallOB(handle)); //调用到了OB
 	}
 
 	public void OpenWebView()
 	{
-		OSHookBridge.CallOC ();
+		//OSHookBridge.CallOC ();
+		//OSHookBridge.Unity_To_iOS ();
 	}
 
     void Test()
@@ -41,4 +43,20 @@ public class PluginController : MonoBehaviour
         }
         */
     }
+
+	#region CoreLocation集成
+
+	public void StartGPSUpdate()
+	{
+		Debug.Log("CoreLocation 开始定位");
+		OSHookBridge.StartGPSUpdate();
+	}
+
+	public void StopGPSUpdate()
+	{
+		Debug.Log("CoreLocation 结束定位");
+		OSHookBridge.StopGPSUpdate();
+	}
+
+	#endregion
 }

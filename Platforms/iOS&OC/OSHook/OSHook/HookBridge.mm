@@ -43,11 +43,14 @@ extern "C" void CallOC()
     NSLog(@"调用到了OC");
 }
 
-/*
-extern "C" void Unity_To_iOS(char *str, char *stt)
+/* UIApplication需要"UnityAppController.h"，只能在UnityAppControll.mm中实现该方法
+//打开原生页面
+extern "C" void Unity_To_iOS()
 {
-    [GetAppController() unityPause:YES];
-    GetAppController().unityView.hidden=YES;
+    //NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 */
-

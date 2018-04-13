@@ -54,6 +54,12 @@ public class OSHookBridge
 	//[DllImport("__Internal")]
 	//public static extern int OpenWebView (string url);
 
+	[DllImport("__Internal")]
+	public static extern void StartGPSUpdate(); //开始定位
+
+	[DllImport("__Internal")]
+	public static extern void StopGPSUpdate(); //结束定位
+
 #elif UNITY_ANDROID
 
     [DllImport("OSHook", CallingConvention=CallingConvention.Cdecl)]
