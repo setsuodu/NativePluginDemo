@@ -55,6 +55,9 @@ public class OSHookBridge
 	//public static extern int OpenWebView (string url);
 
 	[DllImport("__Internal")]
+	public static extern void InitGPSUpdate(); //初始化定位
+
+	[DllImport("__Internal")]
 	public static extern void StartGPSUpdate(); //开始定位
 
 	[DllImport("__Internal")]

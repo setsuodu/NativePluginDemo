@@ -15,7 +15,12 @@ public class PluginController : MonoBehaviour
 		//OC是对象，要用创建实例的方法调用
 		IntPtr handle = OSHookBridge.CreateInstance (); //获取实例
 		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceInt(handle)); //94632165
-		Debug.Log ("Return Instance Int: " + OSHookBridge.GetInstanceCallOB(handle)); //调用到了OB
+		Debug.Log ("Return Instance OB: " + OSHookBridge.GetInstanceCallOB(handle)); //调用到了OB
+	}
+
+	void Update()
+	{
+		
 	}
 
 	public void OpenWebView()
@@ -46,7 +51,13 @@ public class PluginController : MonoBehaviour
 
 	#region CoreLocation集成
 
-	public void StartGPSUpdate()
+	public void InitGPSUpdate()
+	{
+		Debug.Log("CoreLocation 开始定位");
+		OSHookBridge.InitGPSUpdate();
+	}
+
+	public void StatGPSUpdate()
 	{
 		Debug.Log("CoreLocation 开始定位");
 		OSHookBridge.StartGPSUpdate();
@@ -56,6 +67,11 @@ public class PluginController : MonoBehaviour
 	{
 		Debug.Log("CoreLocation 结束定位");
 		OSHookBridge.StopGPSUpdate();
+	}
+
+	public void IOSGPSUpdate(string log)
+	{
+		Debug.Log (log);
 	}
 
 	#endregion

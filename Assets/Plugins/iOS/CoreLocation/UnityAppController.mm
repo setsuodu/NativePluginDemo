@@ -139,7 +139,7 @@ extern "C" void StopGPSUpdate(){
         NSString *lon=[NSString stringWithFormat:@"%.8f",currentLocation.coordinate.longitude];
         NSString *ele=[NSString stringWithFormat:@"%0.8f",currentLocation.altitude];
         strResult=[NSString stringWithFormat:@"{\"state\":\"UpdateGPS\",\"latitude\":\"%@\",\"longitude\":\"%@\",\"altitude\":\"%@\" }",lat,lon,ele];
-        UnitySendMessage("GPSSDK","IOSGPSUpdate", [strResult UTF8String]);
+        UnitySendMessage("Main Camera", "IOSGPSUpdate", [strResult UTF8String]);
     }
     
     // Reverse Geocoding
