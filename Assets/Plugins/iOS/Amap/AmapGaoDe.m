@@ -32,7 +32,7 @@
     
     
     // 设置持续定位
-    [self.locationManager setDistanceFilter:200];
+    [self.locationManager setDistanceFilter:1];
 }
 
 //单次定位回调

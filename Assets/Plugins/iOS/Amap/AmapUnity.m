@@ -8,7 +8,7 @@ AmapGaoDe *iapAmap =nil;
 
 void LocateInit()
 {
-    NSLog(@"Msg ==========开始定位");
+    NSLog(@"Msg ==========初始化定位");
     iapAmap = [[AmapGaoDe alloc] init];
     [iapAmap locateInit];
 }
