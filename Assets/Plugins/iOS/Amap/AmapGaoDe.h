@@ -6,10 +6,12 @@
 
 @property (nonatomic, strong) AMapLocationManager *locationManager;
 
-- (void)startActive;
+- (void)locateInit;
 
-- (void)locateAction;
+- (void)locateOnce;
 
-- (void)stopAction;
+- (void)locateUpdate;
+
+- (void)locateStop;
 
 @end  

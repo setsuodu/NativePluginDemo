@@ -6,23 +6,29 @@
 //Unity to  ios  dayin
 AmapGaoDe *iapAmap =nil;
 
-void InitGPSUpdate()
+void LocateInit()
 {
-    NSLog(@"Msg ==========ios 开始定位");
+    NSLog(@"Msg ==========开始定位");
     iapAmap = [[AmapGaoDe alloc] init];
-    [iapAmap startActive];
+    [iapAmap locateInit];
 }
 
-void StartGPSUpdate()
+void LocateOnce()
 {
-    NSLog(@"Msg ===========获取 定位");
-    [iapAmap locateAction];
+    NSLog(@"Msg ===========单次定位");
+    [iapAmap locateOnce];
 }
 
-void StopGPSUpdate()
+void LocateUpdate()
 {
-    NSLog(@"Msg ===========结束 定位");
-    [iapAmap locateAction];
+    NSLog(@"Msg ===========持续定位");
+    [iapAmap locateUpdate];
+}
+
+void LocateStop()
+{
+    NSLog(@"Msg ===========结束定位");
+    [iapAmap locateStop];
 }
 
 @end

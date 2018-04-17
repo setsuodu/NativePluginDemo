@@ -55,13 +55,16 @@ public class OSHookBridge
 	//public static extern int OpenWebView (string url);
 
 	[DllImport("__Internal")]
-	public static extern void InitGPSUpdate(); //初始化定位
+	public static extern void LocateInit(); //初始化定位
 
 	[DllImport("__Internal")]
-	public static extern void StartGPSUpdate(); //开始定位
+	public static extern void LocateOnce(); //单次定位
 
 	[DllImport("__Internal")]
-	public static extern void StopGPSUpdate(); //结束定位
+	public static extern void LocateUpdate(); //持续定位
+
+	[DllImport("__Internal")]
+	public static extern void LocateStop(); //结束定位
 
 #elif UNITY_ANDROID
 
