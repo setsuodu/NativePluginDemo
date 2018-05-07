@@ -23,10 +23,14 @@ public class PluginController : MonoBehaviour
 		
 	}
 
-	public void OpenWebView()
+    public void OpenWebView()
+    {
+        //OSHookBridge.CallOC ();
+    }
+
+	public void OpenSettingView()
 	{
-		//OSHookBridge.CallOC ();
-		//OSHookBridge.Unity_To_iOS ();
+		OSHookBridge.Unity_To_iOS ();
 	}
 
     void Test()

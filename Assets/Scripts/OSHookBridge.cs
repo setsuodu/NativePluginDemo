@@ -44,17 +44,28 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int GetInstanceCallOB(IntPtr instanceKey);
 
+    //
 	[DllImport("__Internal")]
 	public static extern void CallOC(); //该方法为oc 中mm文件方法名称
 
-	//[DllImport("__Internal")]
-	//public static extern void Unity_To_iOS();
+    # region 在UnityAppControll.mm中实现
 
-	//打开网页
-	//[DllImport("__Internal")]
-	//public static extern int OpenWebView (string url);
+    //@implementation UnityAppController
+    //之间，
+    //@end
 
-	[DllImport("__Internal")]
+    [DllImport("__Internal")]
+	public static extern void Unity_To_iOS();
+
+    //打开网页
+    //[DllImport("__Internal")]
+    //public static extern int OpenWebView (string url);
+
+    #endregion
+
+    #region 高德SDK
+
+    [DllImport("__Internal")]
 	public static extern void LocateInit(); //初始化定位
 
 	[DllImport("__Internal")]
@@ -65,6 +76,8 @@ public class OSHookBridge
 
 	[DllImport("__Internal")]
 	public static extern void LocateStop(); //结束定位
+
+    #endregion
 
 #elif UNITY_ANDROID
 

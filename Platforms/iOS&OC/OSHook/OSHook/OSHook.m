@@ -27,21 +27,17 @@
 }
 
 NSMutableDictionary *_instanceHolder;
-+ (NSMutableDictionary*) instanceHolder{
++ (NSMutableDictionary*) instanceHolder {
     if(_instanceHolder == nil){
         _instanceHolder = [[NSMutableDictionary alloc] init];
     }
     return _instanceHolder;
 }
 
-+ (NSString*) createInstance{
-
++ (NSString*) createInstance {
     NSUUID *myUUID = [NSUUID UUID];
-    
     OSHook *_osHook = [[OSHook alloc] init];
-    
     [[OSHook instanceHolder] setObject:_osHook forKey:[myUUID UUIDString]];
-    
     return [myUUID UUIDString];
 }
 
