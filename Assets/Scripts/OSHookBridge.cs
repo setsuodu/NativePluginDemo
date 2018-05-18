@@ -79,6 +79,13 @@ public class OSHookBridge
 
     #endregion
 
+    #region 支付宝SDK
+
+    [DllImport("__Internal")]
+	public static extern void doAPPay(string orderInfo); //发起支付
+
+    #endregion
+
 #elif UNITY_ANDROID
 
     [DllImport("OSHook", CallingConvention=CallingConvention.Cdecl)]

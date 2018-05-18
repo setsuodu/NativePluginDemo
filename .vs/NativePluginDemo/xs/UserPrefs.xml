@@ -1,10 +1,5 @@
 ﻿<Properties StartupConfiguration="{C72CCCCF-1EE8-4241-31F8-FCFBA3DC58DC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PluginController.cs">
-    <Files>
-      <File FileName="Assets/Scripts/PluginController.cs" Line="33" Column="25" />
-      <File FileName="Assets/Scripts/OSHookBridge.cs" Line="58" Column="43" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
