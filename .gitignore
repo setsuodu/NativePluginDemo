@@ -80,3 +80,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 *.opendb
+
+*.ide-shm
+*.ide-shm
+*.ide-wal
+
+.vs/
+
