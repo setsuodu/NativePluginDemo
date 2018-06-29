@@ -73,7 +73,11 @@ public class OSHookBridge
     // 打开系统设置页
     [DllImport("__Internal")]
 	public static extern void OpenSettingView();
-   
+
+    // 播放视频
+    [DllImport("__Internal")]
+	public static extern void OpenVideoView(string url);
+      
     #endregion
    
 #elif UNITY_ANDROID

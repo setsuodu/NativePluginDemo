@@ -46,4 +46,12 @@ public class BasicController : MonoBehaviour
 	{
 		OSHookBridge.OpenSettingView();
 	}
+
+    // 调用视频播放
+    public void OpenVideoView()
+	{
+        //string url = "http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4";
+		string url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+		OSHookBridge.OpenVideoView(url);
+    }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2017年 薛宇涛. All rights reserved.
 //
 
+#import "StreamPlayer.h"
 #import "HookBridge.h"
 #import "OSHook.h"
 #import <AVFoundation/AVFoundation.h>
@@ -78,17 +79,6 @@ extern "C" void Unity_To_iOS()
     }
 }
 
-extern "C" void OpenWebView(const char * value)
-{
-    //NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
-    NSString *nsstr = [[NSString alloc] initWithUTF8String:value];
-    NSURL *url = [NSURL URLWithString:nsstr];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
-}
-
 //https://www.jianshu.com/p/20ce7f846f75?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 // 打开定位服务界面
 extern "C" void OpenSettingView()
@@ -110,3 +100,24 @@ extern "C" void OpenSettingView()
         }
     }
 }
+
+extern "C" void OpenWebView(const char * value)
+{
+    //NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSString *nsstr = [[NSString alloc] initWithUTF8String:value];
+    NSURL *url = [NSURL URLWithString:nsstr];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+extern "C" void OpenVideoView(const char * url)
+{
+    StreamPlayer *streamPlayer = [[StreamPlayer alloc] initWithFrame:CGRectMake(20,0,360,240)]; //左，上，宽，高
+    [streamPlayer playVideo:[NSURL URLWithString:[NSString stringWithUTF8String:url]]];
+    
+    UIView* unityView = UnityGetGLView();
+    [unityView addSubview:streamPlayer];
+}
+
