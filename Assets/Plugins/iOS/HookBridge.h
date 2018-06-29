@@ -6,11 +6,10 @@
 //  Copyright © 2017年 薛宇涛. All rights reserved.
 //
 
-//列出HookBridge.mm中的方法
-
-extern "C"{
+//暴露.mm中的方法
+extern "C" {
     
-    //C++
+    //第一类，c++方法
     
     void CallMethod();
     
@@ -18,7 +17,7 @@ extern "C"{
     
     int ReturnInt();
     
-    //OC
+    //第二类，c方法，通过创建实例来调用
     
     const char* CreateInstance();
     

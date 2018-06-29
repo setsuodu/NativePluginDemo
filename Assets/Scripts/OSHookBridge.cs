@@ -23,6 +23,11 @@ public class OSHookBridge
 
 #elif UNITY_IOS
 
+	//[DllImport("__Internal")]
+	//public static extern bool getGLProjectionMatrix (float[] matrix);
+
+	#region 第一类
+
 	[DllImport("__Internal")]
 	public static extern void CallMethod();
 
@@ -32,9 +37,10 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int ReturnInt();
 
-	//[DllImport("__Internal")]
-	//public static extern bool getGLProjectionMatrix (float[] matrix);
+    #endregion
 
+    #region 第二类，利用实例调用c方法
+      
 	[DllImport("__Internal")]
 	public static extern IntPtr CreateInstance();
 
@@ -44,22 +50,30 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int GetInstanceCallOB(IntPtr instanceKey);
 
-	[DllImport("__Internal")]
-	public static extern void CallOC(); //该方法为oc 中mm文件方法名称
-    
-	# region 在UnityAppControll.mm中实现
+    #endregion
 
+	# region 第三类，.mm中直接用extern暴露
+
+    [DllImport("__Internal")]
+    public static extern void CallOC(); //.mm中的extern方法
+
+    //在UnityAppControll.mm中实现
     //@implementation UnityAppController
     //..code
     //@end
 
+    // 搜索本地歌曲
     [DllImport("__Internal")]
 	public static extern void Unity_To_iOS();
 
-    //打开网页
+    // 打开网页
     [DllImport("__Internal")]
-    public static extern int OpenWebView (string url);
+	public static extern void OpenWebView (string url);
 
+    // 打开系统设置页
+    [DllImport("__Internal")]
+	public static extern void OpenSettingView();
+   
     #endregion
    
 #elif UNITY_ANDROID

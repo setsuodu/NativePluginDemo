@@ -11,7 +11,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: seol
+  companyName: setsuodu
   productName: OSHook
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ PlayerSettings:
     Android: com.seol.OSHook
     Standalone: unity.seol.OSHook
     Tizen: com.seol.OSHook
-    iOS: com.seol.OSHook
+    iOS: com.setsuodu.OSHook
     tvOS: com.seol.OSHook
   buildNumber:
     iOS: 0
@@ -305,9 +305,9 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
-  locationUsageDescription: 
-  microphoneUsageDescription: 
+  cameraUsageDescription: "\u8BF7\u6C42\u4F7F\u7528\u76F8\u673A"
+  locationUsageDescription: "\u8BF7\u6C42\u4F7F\u7528\u5B9A\u4F4D"
+  microphoneUsageDescription: "\u8BF7\u6C42\u4F7F\u7528\u9EA6\u514B\u98CE"
   switchNetLibKey: 
   switchSocketMemoryPoolSize: 6144
   switchSocketAllocatorPoolSize: 128
