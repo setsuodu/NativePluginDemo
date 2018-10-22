@@ -28,14 +28,13 @@ public class XCodePostProcess
 
 		// 添加系统内置框架
 		//pbxProj.AddFrameworkToProject (targetGuid, "Security.framework", false); //weak: true:optional, false:required
-		pbxProj.AddFrameworkToProject (targetGuid, "CoreLocation.framework", false);
-		pbxProj.AddFrameworkToProject (targetGuid, "Security.framework", false);
-		pbxProj.AddFrameworkToProject (targetGuid, "CoreTelephony.framework", false);
-		pbxProj.AddFrameworksBuildPhase (targetGuid);
+		//pbxProj.AddFrameworkToProject (targetGuid, "CoreLocation.framework", false);
+		//pbxProj.AddFrameworkToProject (targetGuid, "CoreTelephony.framework", false);
+		//pbxProj.AddFrameworksBuildPhase (targetGuid);
 
 		// 添加.tbd
-		pbxProj.AddFileToBuild(targetGuid, pbxProj.AddFile("usr/lib/libz.tbd", "Frameworks/libz.tbd", PBXSourceTree.Sdk));
-		pbxProj.AddFileToBuild(targetGuid, pbxProj.AddFile("usr/lib/libc++.tbd", "Frameworks/libc++.tbd", PBXSourceTree.Sdk));
+		//pbxProj.AddFileToBuild(targetGuid, pbxProj.AddFile("usr/lib/libz.tbd", "Frameworks/libz.tbd", PBXSourceTree.Sdk));
+		//pbxProj.AddFileToBuild(targetGuid, pbxProj.AddFile("usr/lib/libc++.tbd", "Frameworks/libc++.tbd", PBXSourceTree.Sdk));
 
 		// 设置teamID
         //...

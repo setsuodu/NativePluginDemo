@@ -7,8 +7,10 @@
 //
 
 #import "OSHook.h"
+#import <Foundation/Foundation.h>
+#import "UnityAppController.h"
 
-@implementation OSHook
+@implementation OSHook : NSObject
 
 + (int) returnInt{
     return 34;
@@ -50,4 +52,43 @@ NSMutableDictionary *_instanceHolder;
     return 0;
 }
 
+- (void)showAlert
+{
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要提交吗？" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction * cancelAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        // 点击取消要执行的代码
+        UnitySendMessage("AlertView", "Cancel", "");
+    }];
+    
+    UIAlertAction *comfirmAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 点击确定要执行的代码
+        UnitySendMessage("AlertView", "Confirm", "");
+    }];
+    
+    [alertVC addAction:cancelAc];
+    [alertVC addAction:comfirmAc];
+    
+    UIViewController * uiview = UnityGetGLViewController();
+    [uiview presentViewController:alertVC animated:YES completion:nil];
+}
+
 @end
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+    OSHook * controller = nil;
+    
+    void ShowAlert()
+    {
+        if(controller == nil) {
+            controller = [[OSHook alloc] init];
+        }
+        [controller showAlert];
+    }
+    
+#ifdef __cplusplus
+}
+#endif

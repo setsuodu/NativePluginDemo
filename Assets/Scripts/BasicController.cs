@@ -54,4 +54,10 @@ public class BasicController : MonoBehaviour
 		string url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
 		OSHookBridge.OpenVideoView(url);
     }
+
+    // UIAlert
+    public void ShowAlert()
+    {
+        OSHookBridge.ShowAlert();
+    }
 }

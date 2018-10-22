@@ -50,9 +50,13 @@ public class OSHookBridge
 	[DllImport("__Internal")]
 	public static extern int GetInstanceCallOB(IntPtr instanceKey);
 
+    // 标题，内容，取消，确定
+    [DllImport("__Internal")]
+    public static extern int ShowAlert();
+
     #endregion
 
-	# region 第三类，.mm中直接用extern暴露
+    #region 第三类，.mm中直接用extern暴露
 
     [DllImport("__Internal")]
     public static extern void CallOC(); //.mm中的extern方法
